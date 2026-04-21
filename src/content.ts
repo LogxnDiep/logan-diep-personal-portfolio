@@ -137,13 +137,13 @@ export const projectShowcases = [
     description:
       'A custom 6-layer control motherboard for an underwater robotics platform, designed to distribute power, interface with sensors, and coordinate propulsion and actuation systems from a central embedded controller. The design combines a 12V power input stage with reverse-polarity protection and onboard 5V/3.3V regulation, an STM32F407-based control section, multiple ESC/thruster connector banks, sensor integration for dual IMUs, rail current sensing, depth sensing, and leak detection, plus stepper and servo outputs for auxiliary mechanisms. Altogether, it functions as the electrical backbone of an ROV, providing the processing, power management, and I/O needed for reliable vehicle control and subsystem integration.',
     media: [
-      { src: '/projects/projects-1/image-1.png', label: '3D Motherboard View' },
-      { src: '/projects/projects-1/image-2.png', label: '2D Motherboard View' },
-      { src: '/projects/projects-1/image-3.png', label: '3D Buck Converter' },
-      { src: '/projects/projects-1/image-4.png', label: '2D Buck Converter' },
-      { src: '/projects/projects-1/image-5.png', label: '3D ESC Cards' },
-      { src: '/projects/projects-1/image-6.png', label: '2D ESC Cards' },
-      { src: '/projects/projects-1/image-7.pdf', label: 'Schematic' },
+      { src: './projects/projects-1/image-1.png', label: '3D Motherboard View' },
+      { src: './projects/projects-1/image-2.png', label: '2D Motherboard View' },
+      { src: './projects/projects-1/image-3.png', label: '3D Buck Converter' },
+      { src: './projects/projects-1/image-4.png', label: '2D Buck Converter' },
+      { src: './projects/projects-1/image-5.png', label: '3D ESC Cards' },
+      { src: './projects/projects-1/image-6.png', label: '2D ESC Cards' },
+      { src: './projects/projects-1/image-7.pdf', label: 'Schematic' },
     ],
     tags: [
       'Embedded Systems',
@@ -171,9 +171,9 @@ export const projectShowcases = [
     description:
       'A USB-powered electronic roulette wheel built around an ATmega32U4 microcontroller, with a charlieplexed LED array used to simulate the spinning wheel and final landing position. The schematic shows integrated USB connectivity, ESD protection, a 16 MHz clock, voltage regulation, a buzzer for sound effects, a pushbutton for user input, and current-limited LED drive networks. The result is a compact interactive embedded system that combines firmware timing, multiplexed display control, and simple game logic to create a digital roulette experience with minimal hardware overhead.',
     media: [
-      { src: '/projects/projects-2/image-1.png', label: '3D Render' },
-      { src: '/projects/projects-2/image-2.png', label: '2D Layout' },
-      { src: '/projects/projects-2/image-3.pdf', label: 'Schematic' },
+      { src: './projects/projects-2/image-1.png', label: '3D Render' },
+      { src: './projects/projects-2/image-2.png', label: '2D Layout' },
+      { src: './projects/projects-2/image-3.pdf', label: 'Schematic' },
     ],
     tags: [
       'Embedded C',
@@ -199,9 +199,9 @@ export const projectShowcases = [
     description:
       'A Raspberry Pi Zero 2 W–based motor control board for a small robotic system, integrating dual motor driver modules to control four DC motors, dedicated servo outputs, IR transmitter and receiver circuitry, onboard 5V regulation, battery power input, and GPIO breakout connectivity. The schematic indicates a compact control platform that allows the Raspberry Pi to drive locomotion, read IR sensing inputs, and actuate additional mechanisms such as servos, making it well suited for autonomous or remote-controlled robotic applications. In effect, it serves as a lightweight robotics controller that bridges high-level processing on the Pi with low-level motor and sensor hardware.',
     media: [
-      { src: '/projects/projects-3/image-1.png', label: '3D PCB View' },
-      { src: '/projects/projects-3/image-2.png', label: '2D Layout' },
-      { src: '/projects/projects-3/image-3.pdf', label: 'Schematic' },
+      { src: './projects/projects-3/image-1.png', label: '3D PCB View' },
+      { src: './projects/projects-3/image-2.png', label: '2D Layout' },
+      { src: './projects/projects-3/image-3.pdf', label: 'Schematic' },
     ],
     tags: [
       'Raspberry Pi',
@@ -227,10 +227,10 @@ export const projectShowcases = [
     description:
       'A comprehensive data analysis and machine learning project that predicts Premier League season standings and outcomes using historical match data from 2013–2026. Originally developed in December 2024 – January 2025, this project has been remade and updated to account for the 2025–26 Premier League season, with the current portfolio display showing the latest analysis and predictions. The pipeline ingests detailed statistics including goals for/against, expected goals (xG), points-per-match ratios, and team performance metrics, then applies predictive modeling to forecast final league positions and championship probabilities. The analysis includes exploratory data visualization, season-by-season trend analysis, team performance clustering, and statistical forecasting. The dashboard displays historical standings, predictive models for upcoming seasons, and interactive visualizations enabling stakeholders to explore team trajectories, relegation risks, and championship contenders.',
     media: [
-      { src: '/projects/projects-4/image-1.png', label: 'Premier League Table (4/21/2026)' },
-      { src: '/projects/projects-4/image-2.png', label: 'Projected Points & Standings' },
-      { src: '/projects/projects-4/image-3.png', label: 'Top 4 Finishes Graph' },
-      { src: '/projects/projects-4/image-4.png', label: 'Championship Win Probabilities' },
+      { src: './projects/projects-4/image-1.png', label: 'Premier League Table (4/21/2026)' },
+      { src: './projects/projects-4/image-2.png', label: 'Projected Points & Standings' },
+      { src: './projects/projects-4/image-3.png', label: 'Top 4 Finishes Graph' },
+      { src: './projects/projects-4/image-4.png', label: 'Championship Win Probabilities' },
     ],
     tags: ['Data Science', 'Prediction', 'Python', 'Machine Learning', 'Sports Analytics'],
     date: 'December 2024 – January 2025',
