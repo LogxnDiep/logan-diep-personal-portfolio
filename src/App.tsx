@@ -38,7 +38,7 @@ function App() {
             </p>
             <div className="flex gap-4 justify-center flex-wrap hero-buttons">
               <a
-                href="/Logan_Diep_Resume.pdf"
+                href="./Logan_Diep_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-white text-white hover:bg-white/10 transition flex items-center gap-2"
@@ -139,7 +139,7 @@ function App() {
             </div>
             <div className="flex justify-center">
               <img
-                src="/headshot.jpg"
+                src="./headshot.jpg"
                 alt="Logan Diep"
                 className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-lg border border-white/20"
               />
