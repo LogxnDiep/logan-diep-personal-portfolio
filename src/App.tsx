@@ -53,7 +53,7 @@ function App() {
             easing="ease-out"
             extraScale={1.2}
           >
-            <div className="relative z-10 text-center max-w-4xl">
+            <div className="z-10 text-center max-w-4xl">
               <h1 className="text-8xl md:text-8xl font-bold text-white mb-6 typewriter-text">
                 Logan Diep
               </h1>
