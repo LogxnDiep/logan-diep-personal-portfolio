@@ -1,6 +1,8 @@
 import { profile, projectShowcases, experience } from './content';
 import { AppShell, Section, SectionHeading } from './components/ui';
 import { ProjectShowcase } from './components/ProjectShowcase';
+import ClickSpark from './components/ClickSpark';
+import Plasma from './components/Plasma';
 
 function App() {
 
@@ -27,27 +29,49 @@ function App() {
       </nav>
 
       <main>
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center pt-20 px-6">
-          <div className="text-center max-w-4xl">
-            <h1 className="text-8xl md:text-8xl font-bold text-white mb-6 typewriter-text">
-              Logan Diep
-            </h1>
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto typewriter-description text-center">
-              Hardware engineer focused on PCB design, embedded systems, and FPGAs
-            </p>
-            <div className="flex gap-4 justify-center flex-wrap hero-buttons">
-              <a
-                href="./Logan_Diep_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-white text-white hover:bg-white/10 transition flex items-center gap-2"
-              >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z" />
-                  <path d="M13 2v7h7" fill="none" stroke="currentColor" strokeWidth="2"/>
-                  <rect x="8" y="11" width="8" height="1" fill="currentColor"/>
-                  <rect x="8" y="14" width="8" height="1" fill="currentColor"/>
+        {/* Hero Section with Plasma Background */}
+        <section className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+          {/* Plasma Background */}
+          <div className="absolute inset-0 z-0">
+            <Plasma
+              color="#3b82f6"
+              speed={0.6}
+              direction="forward"
+              scale={1.1}
+              opacity={0.7}
+              mouseInteractive={true}
+            />
+          </div>
+
+          {/* ClickSpark + Content Overlay */}
+          <ClickSpark
+            sparkColor="#60a5fa"
+            sparkSize={12}
+            sparkRadius={20}
+            sparkCount={10}
+            duration={500}
+            easing="ease-out"
+            extraScale={1.2}
+          >
+            <div className="relative z-10 text-center max-w-4xl">
+              <h1 className="text-8xl md:text-8xl font-bold text-white mb-6 typewriter-text">
+                Logan Diep
+              </h1>
+              <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto typewriter-description text-center">
+                Hardware engineer focused on PCB design, embedded systems, and FPGAs
+              </p>
+              <div className="flex gap-4 justify-center flex-wrap hero-buttons">
+                <a
+                  href="./Logan_Diep_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 border border-white text-white hover:bg-white/10 transition flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z" />
+                    <path d="M13 2v7h7" fill="none" stroke="currentColor" strokeWidth="2"/>
+                    <rect x="8" y="11" width="8" height="1" fill="currentColor"/>
+                    <rect x="8" y="14" width="8" height="1" fill="currentColor"/>
                 </svg>
                 Resume
               </a>
@@ -64,6 +88,7 @@ function App() {
               </a>
             </div>
           </div>
+          </ClickSpark>
         </section>
 
         {/* Projects Section */}
