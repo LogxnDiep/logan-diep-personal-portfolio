@@ -2,7 +2,7 @@ import { profile, projectShowcases, experience } from './content';
 import { AppShell, Section, SectionHeading } from './components/ui';
 import { ProjectShowcase } from './components/ProjectShowcase';
 import ClickSpark from './components/ClickSpark';
-import Plasma from './components/Plasma';
+import Radar from './components/Radar';
 
 function App() {
 
@@ -30,20 +30,29 @@ function App() {
 
       <main>
         {/* Hero Section with Plasma Background */}
-        <section className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
-          {/* Plasma Background */}
+        <section className="relative w-full min-h-screen overflow-hidden">
+          {/* Radar Background - Full Width */}
           <div className="absolute inset-0 z-0">
-            <Plasma
-              color="#3b82f6"
-              speed={0.6}
-              direction="forward"
-              scale={1.1}
-              opacity={0.7}
-              mouseInteractive={true}
+            <Radar
+              speed={1.0}
+              scale={0.5}
+              ringCount={10}
+              spokeCount={10}
+              ringThickness={0.05}
+              spokeThickness={0.01}
+              sweepSpeed={1.0}
+              sweepWidth={2.0}
+              sweepLobes={1}
+              color="#29ff8a"
+              backgroundColor="#000000"
+              falloff={2.0}
+              brightness={1.0}
+              enableMouseInteraction={true}
+              mouseInfluence={0.1}
             />
           </div>
 
-          {/* ClickSpark + Content Overlay */}
+          {/* ClickSpark - Full Hero Coverage */}
           <ClickSpark
             sparkColor="#60a5fa"
             sparkSize={12}
@@ -53,48 +62,50 @@ function App() {
             easing="ease-out"
             extraScale={1.2}
           >
-            <div className="z-10 text-center max-w-4xl">
-              <h1 className="text-8xl md:text-8xl font-bold text-white mb-6 typewriter-text">
-                Logan Diep
-              </h1>
-              <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto typewriter-description text-center">
-                Hardware engineer focused on PCB design, embedded systems, and FPGAs
-              </p>
-              <div className="flex gap-4 justify-center flex-wrap hero-buttons">
+            <div className="relative w-full h-full min-h-screen flex items-center justify-center pt-20 px-6">
+              <div className="z-10 text-center max-w-4xl bg-black/50 backdrop-blur-sm px-8 py-12 rounded-lg border border-white/10">
+                <h1 className="text-8xl md:text-8xl font-bold text-white mb-6 typewriter-text">
+                  Logan Diep
+                </h1>
+                <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto typewriter-description text-center">
+                  Hardware engineer focused on PCB design, embedded systems, and FPGAs
+                </p>
+                <div className="flex gap-4 justify-center flex-wrap hero-buttons">
+                  <a
+                    href="./Logan_Diep_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 border border-white text-white hover:bg-white/10 transition flex items-center gap-2"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z" />
+                      <path d="M13 2v7h7" fill="none" stroke="currentColor" strokeWidth="2"/>
+                      <rect x="8" y="11" width="8" height="1" fill="currentColor"/>
+                      <rect x="8" y="14" width="8" height="1" fill="currentColor"/>
+                  </svg>
+                  Resume
+                </a>
                 <a
-                  href="./Logan_Diep_Resume.pdf"
+                  href={`https://${profile.linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 border border-white text-white hover:bg-white/10 transition flex items-center gap-2"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z" />
-                    <path d="M13 2v7h7" fill="none" stroke="currentColor" strokeWidth="2"/>
-                    <rect x="8" y="11" width="8" height="1" fill="currentColor"/>
-                    <rect x="8" y="14" width="8" height="1" fill="currentColor"/>
-                </svg>
-                Resume
-              </a>
-              <a
-                href={`https://${profile.linkedin}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-white text-white hover:bg-white/10 transition flex items-center gap-2"
-              >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.047-8.826 0-9.749h3.554v1.381c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.591zM5.337 9.433c-1.144 0-1.915-.762-1.915-1.715 0-.955.768-1.716 1.959-1.716 1.188 0 1.914.761 1.939 1.716 0 .953-.751 1.715-1.983 1.715zm1.946 11.019H3.39V8.684h3.893v11.768zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-                LinkedIn
-              </a>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.047-8.826 0-9.749h3.554v1.381c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.591zM5.337 9.433c-1.144 0-1.915-.762-1.915-1.715 0-.955.768-1.716 1.959-1.716 1.188 0 1.914.761 1.939 1.716 0 .953-.751 1.715-1.983 1.715zm1.946 11.019H3.39V8.684h3.893v11.768zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
             </div>
-          </div>
+            </div>
           </ClickSpark>
         </section>
 
         {/* Projects Section */}
         <Section id="projects" className="py-20 md:py-32">
           <h2 className="text-4xl md:text-5xl font-bold mb-16">Featured Projects</h2>
-          <div className="space-y-16">
+          <div className="space-y-10 max-w-5xl mx-auto">
             {projectShowcases.map((project) => (
               <ProjectShowcase
                 key={project.id}
