@@ -37,10 +37,10 @@ export function ProjectShowcase({
   };
 
   return (
-    <div className="bg-gray-950 border border-gray-700 rounded-lg p-8 md:p-12">
+    <div className="bg-gray-950 border border-gray-700 rounded-lg p-6 md:p-8">
       {/* Project Header */}
-      <div className="mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">{name}</h2>
+      <div className="mb-8">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">{name}</h2>
         <p className="text-gray-400 text-lg leading-relaxed mb-6">{description}</p>
         <div className="flex flex-wrap gap-2 mb-6">
           {tags.map((tag) => (
@@ -57,7 +57,7 @@ export function ProjectShowcase({
 
       {/* Media Gallery */}
       {media.length > 0 && (
-        <div className="mb-12">
+        <div className="mb-8">
           {/* Media Label Tab */}
           <div className="mb-4">
             <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 border border-gray-600 inline-block rounded bg-gray-900/50 text-gray-300">
@@ -65,7 +65,7 @@ export function ProjectShowcase({
             </span>
           </div>
 
-          <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mb-6 flex items-center justify-center min-h-[400px]">
+          <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mb-6 flex items-center justify-center min-h-[300px]">
             {isCurrentMediaPdf ? (
               <div className="w-full h-[500px] flex flex-col items-center justify-center">
                 <object

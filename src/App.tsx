@@ -37,7 +37,7 @@ function App() {
               color="#3b82f6"
               speed={0.6}
               direction="forward"
-              scale={1.1}
+              scale={0.85}
               opacity={0.7}
               mouseInteractive={true}
             />
