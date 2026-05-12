@@ -18,11 +18,14 @@ function App() {
             <p className="text-xs text-gray-400">Computer Engineer | Hardware Engineer</p>
           </div>
           <div className="flex gap-6">
-            <a href="#about" className="text-sm text-gray-300 hover:text-white transition">
-              About
-            </a>
             <a href="#projects" className="text-sm text-gray-300 hover:text-white transition">
               Projects
+            </a>
+            <a href="#experience" className="text-sm text-gray-300 hover:text-white transition">
+              Experience
+            </a>
+            <a href="#about" className="text-sm text-gray-300 hover:text-white transition">
+              About
             </a>
           </div>
         </div>
